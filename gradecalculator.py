@@ -2,22 +2,17 @@
 grades=('A+','A','A-','B+','B','B-','C+','C','C-','D+','D','D-')
 responses = ('y','n')       
 
-print "Welcome to the Hunter College High School semester GPA calculator!",\
-"This GPA Calculator works exclusively with Hunter College High School, and is not guaranteed to reflect the system of any other school",\
-"Hunter inputs each letter grade with the highest possible numerical grade it could be, and then averages it.",\
-"If you failed a class, this GPA calculator will not work for you. This is because I don't know how Hunter factors in failed classes. I am working on an update to fix that.",\
-"Follow all directions carefully. If you do not follow the directions, you will crash the program...code is finicky!"
-
-answerinitial = raw_input("Do you know your current semester gpa? [y/n] ")
+print("Welcome to the Hunter College High School semester GPA calculator! This GPA Calculator works exclusively with Hunter College High School, and is not guaranteed to reflect the system of any other school Hunter inputs each letter grade with the highest possible numerical grade it could be, and then averages it. If you failed a class, this GPA calculator will not work for you. This is because I don't know how Hunter factors in failed classes. I am working on an update to fix that. Follow all directions carefully. If you do not follow the directions, you will crash the program...code is finicky!")
+answerinitial = input("Do you know your current semester gpa? [y/n] ")
 if answerinitial not in responses:
-    print "You did not enter an acceptable response"
+    print("You did not enter an acceptable response")
     
 if answerinitial == "y":
-    avg = raw_input("Enter it here, out of 100: ") 
+    avg = input("Enter it here, out of 100: ") 
 else:
     #Calculates first grade
-    firstclass = raw_input("Which class should we start with? ")
-    class1 = raw_input("Enter your " + firstclass + " grade, use capital letters ONLY: " )
+    firstclass = input("Which class should we start with? ")
+    class1 = input("Enter your " + firstclass + " grade, use capital letters ONLY: " )
     
     #For special grades
     if class1 in grades:
@@ -54,22 +49,22 @@ else:
         
         #Presents numerical grade to the user
         class1grade = str(class1gradeint)
-        print "Your " + firstclass + " grade is a " + class1grade + "/100."
+        print("Your " + firstclass + " grade is a " + class1grade + "/100.")
         
     #Deals with failed classes
     elif class1 == 'F':
         class1grade = "Fail"
-        print "You failed " + firstclass + ". This program is not yet capable of calculating a GPA with an F in it."
+        print("You failed " + firstclass + ". This program is not yet capable of calculating a GPA with an F in it.")
         
         
     #Deals with errors in the input
     else:
-        print "You did not enter a proper grade. Please make sure you used capital letters. Restart and try again."
+        print("You did not enter a proper grade. Please make sure you used capital letters. Restart and try again.")
         
     
     #Calculates second grade    
-    secondclass = raw_input("Which class should we do next? ")
-    class2 = raw_input("Enter your " + secondclass + " grade, use capital letters ONLY: " )
+    secondclass = input("Which class should we do next? ")
+    class2 = input("Enter your " + secondclass + " grade, use capital letters ONLY: " )
     
     #For special grades
     if class2 in grades:
@@ -106,22 +101,22 @@ else:
             
         #Presents numerical grade to the user
         class2grade = str(class2gradeint)
-        print "Your " + secondclass + " grade is a " + class2grade + "/100"
+        print("Your " + secondclass + " grade is a " + class2grade + "/100")
         
     #Deals with failed classes
     elif class2 == 'F':
         class2grade = "Fail"
-        print "You failed " + firstclass + ". This program is not yet capable of calculating a GPA with an F in it."
+        print("You failed " + firstclass + ". This program is not yet capable of calculating a GPA with an F in it.")
         
         
     #Deals with errors in the input
     else:
-        print "You did not enter a proper grade. Please make sure you used capital letters. Restart and try again."
+        print("You did not enter a proper grade. Please make sure you used capital letters. Restart and try again.")
         
         
     #Calculates third grade    
-    thirdclass = raw_input("Which class should we do next? ")
-    class3 = raw_input("Enter your " + thirdclass + " grade, use capital letters ONLY: " )
+    thirdclass = input("Which class should we do next? ")
+    class3 = input("Enter your " + thirdclass + " grade, use capital letters ONLY: " )
     
     #For special grades
     if class3 in grades:
@@ -158,22 +153,22 @@ else:
             
         #Presents numerical grade to the user
         class3grade = str(class3gradeint)
-        print "Your " + thirdclass + " grade is a " + class3grade + "/100"
+        print("Your " + thirdclass + " grade is a " + class3grade + "/100")
         
     #Deals with failed classes
     elif class3 == 'F':
         class3grade = "Fail"
-        print "You failed " + firstclass + ". This program is not yet capable of calculating a GPA with an F in it."
+        print("You failed " + firstclass + ". This program is not yet capable of calculating a GPA with an F in it.")
         
         
     #Deals with errors in the input
     else:
-        print "You did not enter a proper grade. Please make sure you used capital letters. Restart and try again."  
+        print("You did not enter a proper grade. Please make sure you used capital letters. Restart and try again.")  
         
                 
     #Calculates fourth grade    
-    fourthclass = raw_input("Which class should we do next? ")
-    class4 = raw_input("Enter your " + fourthclass + " grade, use capital letters ONLY: " )
+    fourthclass = input("Which class should we do next? ")
+    class4 = input("Enter your " + fourthclass + " grade, use capital letters ONLY: " )
     
     #For special grades
     if class4 in grades:
@@ -210,22 +205,22 @@ else:
             
         #Presents numerical grade to the user
         class4grade = str(class4gradeint)
-        print "Your " + fourthclass + " grade is a " + class4grade + "/100"
+        print("Your " + fourthclass + " grade is a " + class4grade + "/100")
         
     #Deals with failed classes
     elif class4 == 'F':
         class4grade = "Fail"
-        print "You failed " + firstclass + ". This program is not yet capable of calculating a GPA with an F in it."
+        print("You failed " + firstclass + ". This program is not yet capable of calculating a GPA with an F in it.")
         
         
     #Deals with errors in the input
     else:
-        print "You did not enter a proper grade. Please make sure you used capital letters. Restart and try again."
+        print("You did not enter a proper grade. Please make sure you used capital letters. Restart and try again.")
         
         
     #Calculates fifth grade    
-    fifthclass = raw_input("Which class should we do next? ")
-    class5 = raw_input("Enter your " + fifthclass + " grade, use capital letters ONLY: " )
+    fifthclass = input("Which class should we do next? ")
+    class5 = input("Enter your " + fifthclass + " grade, use capital letters ONLY: " )
     
     #For special grades
     if class5 in grades:
@@ -262,31 +257,31 @@ else:
             
         #Presents numerical grade to the user
         class5grade = str(class5gradeint)
-        print "Your " + fifthclass + " grade is a " + class5grade + "/100"
+        print("Your " + fifthclass + " grade is a " + class5grade + "/100")
         
     #Deals with failed classes
     elif class5 == 'F':
         class5grade = "Fail"
-        print "You failed " + firstclass + ". This program is not yet capable of calculating a GPA with an F in it."
+        print("You failed " + firstclass + ". This program is not yet capable of calculating a GPA with an F in it.")
         
         
     #Deals with errors in the input
     else:
-        print "You did not enter a proper grade. Please make sure you used capital letters. Restart and try again."
+        print("You did not enter a proper grade. Please make sure you used capital letters. Restart and try again.")
         
         
     #Establishes if the user has a sixth class 
-    response = raw_input("Do you have a sixth class? [y/n] ")
+    response = input("Do you have a sixth class? [y/n] ")
     if response not in responses:
-        print "You did not enter an acceptable response"
+        print("You did not enter an acceptable response")
         
     if response == 'n':
         pass
     if response == 'y':
         
         #Calculates sixth grade    
-        sixthclass = raw_input("What is your sixth class? ")
-        class6 = raw_input("Enter your " + sixthclass + " grade, use capital letters ONLY: " )
+        sixthclass = input("What is your sixth class? ")
+        class6 = input("Enter your " + sixthclass + " grade, use capital letters ONLY: " )
         
         #For special grades
         if class6 in grades:
@@ -323,18 +318,18 @@ else:
                 
             #Presents numerical grade to the user
             class6grade = str(class6gradeint)
-            print "Your " + sixthclass + " grade is a " + class6grade + "/100"
+            print("Your " + sixthclass + " grade is a " + class6grade + "/100")
             
         #Deals with failed classes
         elif class6 == 'F':
             class6grade = "Fail"
-            print "You failed " + firstclass + ". This program is not yet capable of calculating a GPA with an F in it."
+            print("You failed " + firstclass + ". This program is not yet capable of calculating a GPA with an F in it.")
             python = sys.executable
             os.execl(python, python, * sys.argv)
             
         #Deals with errors in the input
         else:
-            print "You did not enter a proper grade. Please make sure you used capital letters. Restart and try again."
+            print("You did not enter a proper grade. Please make sure you used capital letters. Restart and try again.")
             python = sys.executable
             os.execl(python, python, * sys.argv)
     
@@ -346,24 +341,24 @@ else:
         total = class1gradeint + class2gradeint + class3gradeint + class4gradeint + class5gradeint 
         avgint = total / 5
     avg = str(avgint)
-    print "Congratulations! Your average for this semester is: " + avg
+    print("Congratulations! Your average for this semester is: " + avg)
 
 #Begins process of calculating a goal GPA
-newresponse = raw_input("Would you like to know what grades you need to get to change your average? [y/n] ")
+newresponse = input("Would you like to know what grades you need to get to change your average? [y/n] ")
 if newresponse not in responses:
-    print "You did not enter an acceptable response"
+    print("You did not enter an acceptable response")
 
     
 #Obtains necessary info    
 if newresponse == 'y':
-    goalgrade = raw_input("Please enter your goal average, out of 100: ")
-    naviance = raw_input("Please enter your current GPA on Naviance: ")
+    goalgrade = input("Please enter your goal average, out of 100: ")
+    naviance = input("Please enter your current GPA on Naviance: ")
     gradelevels = ('1', '2', '3', '4', '5')
-    gradelevel = raw_input("Please enter your current grade level. If you are in eighth grade, type '1', if you are in ninth grade,type '2', etc. ")
+    gradelevel = input("Please enter your current grade level. If you are in eighth grade, type '1', if you are in ninth grade,type '2', etc. ")
     if gradelevel == '0':
-        print "Chill out, seven."
+        print("Chill out, seven.")
     elif gradelevel not in gradelevels:
-        print "This is not an acceptable grade level"
+        print("This is not an acceptable grade level")
         
         
     #Does the math, presents it to the user
@@ -376,19 +371,19 @@ if newresponse == 'y':
         difference = (goalgradeint * gradelevelint) - almostavg
         differencestr = str(difference)
         if difference > 100:
-            print "It is mathematically impossible for you to get a " + goalgrade + ". You would need a " + differencestr + " for the year to get that GPA."
+            print("It is mathematically impossible for you to get a " + goalgrade + ". You would need a " + differencestr + " for the year to get that GPA.")
         else: 
-            semester = raw_input("Have you recieved second semester grades yet? [y/n] ")
+            semester = input("Have you recieved second semester grades yet? [y/n] ")
             if semester not in responses:
-                print "You did not enter an acceptable response"
+                print("You did not enter an acceptable response")
             elif semester == 'n':
                 sem2int = (difference * 2) - avgint 
                 sem2 = str(sem2int)
                 if sem2int > 100:
-                    print "You need a " + sem2 + " for second semester in order to get a " + differencestr + " for the year, which would give you your goal gpa.",\
-                    "But, of course, it is impossible to get a " + sem2 + " for the semester."
+                    print("You need a " + sem2 + " for second semester in order to get a " + differencestr + " for the year, which would give you your goal gpa.",\
+                    "But, of course, it is impossible to get a " + sem2 + " for the semester.")
                 else:
-                    print "You need a " + sem2 + " for second semester in order to get a " + differencestr + " for the year, which would give you your goal gpa."
+                    print("You need a " + sem2 + " for second semester in order to get a " + differencestr + " for the year, which would give you your goal gpa.")
             
             #If the Naviance GPA includes this year's grades
             else:
@@ -396,13 +391,11 @@ if newresponse == 'y':
                 realdifference = (goalgradeint * (gradelevelint + 1)) - realalmostavg
                 realdifferencestr = str(realdifference)
                 if gradelevelint == 5:
-                    print "You're a senior and Hunter has probably already updated your Naviance GPA. There is nothing you can do, I'm afraid."
+                    print("You're a senior and Hunter has probably already updated your Naviance GPA. There is nothing you can do, I'm afraid.")
                 if realdifference > 100:
-                    print "It is likely that Hunter has already updated your Naviance GPA with this year's grades.",\
-                    "That means it is mathematically impossible for you to get a " + goalgrade + ". You would need a " + realdifferencestr + " for next year to get that GPA."
+                    print("It is likely that Hunter has already updated your Naviance GPA with this year's grades.",\
+                    "That means it is mathematically impossible for you to get a " + goalgrade + ". You would need a " + realdifferencestr + " for next year to get that GPA.")
                 else:
-                    print "You need to get a " + realdifferencestr + " for next year in order to get a " + goalgrade + " for your final GPA."
+                    print("You need to get a " + realdifferencestr + " for next year in order to get a " + goalgrade + " for your final GPA.")
 else:
-    print "Thanks! Have a good day."
-                    
-            
+    print("Thanks! Have a good day.")
